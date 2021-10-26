@@ -62,7 +62,8 @@ app.get("/workname",(req,res) =>{
 
 app.post("/insertwork",(req,res) =>{
     const {fullname,phone,email,work_detail,work_name} = req.body
-    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status) value ('${fullname}','${phone}','${email}','${work_detail}','${work_name}')` , (err,result)=>{
+    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status) 
+    value ('${fullname}','${phone}','${email}','${work_detail}','${work_name}','wait')` , (err,result)=>{
         if(err){
             console.log(err)
         
@@ -84,13 +85,4 @@ app.get("/showwork",(req,res) =>{
             res.send(result)
         }
     })
-})
-
-app.update("/update",(req,res)=>{
-    try {
-        const {}
-        
-    } catch (error) {
-        
-    }
 })
