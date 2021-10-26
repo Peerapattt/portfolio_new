@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 
-export default function EditWork() {
-    
+
+export default function EditWork(props) {
+  const [fullname,setfullname] = useState ([])
+  const [phone,setphone] = useState ([])
+  const [email,setemail] = useState([])
+  const [status,setstatus] = useState([])
+  const [ id,setid] = useState ([])
+
+  const onUpdateData = (e)=>{
+    e.preventDefault();
+    try{
+        const bodyIn = {fullname,phone,email,status}
+      const res = fetch(`http://localhost:6060/updatework/${id}`,{
+        method:"put",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(bodyIn)
+      })
+      window.location="/buy";
+    }catch (err){
+        console.error(err.message);
+    }
+}
+  
+
     return (
         <div>
         <div>
@@ -9,17 +31,17 @@ export default function EditWork() {
                   type="button"
                   className="btn btn-dark"
                   data-toggle="modal"
-                //   data-target={`#buy_id${buy_id}`}
+                  data-target={`#id${id}`}
                 >
                   Edit
                 </button>
                 {/* The Modal */}
-                {/* <div className="modal fade" id={`buy_id${buy_id}`}> */}
+                <div className="modal fade" id={`id${id}`}>
                   <div className="modal-dialog">
                     <div className="modal-content">
                       {/* Modal Header */}
                       <div className="modal-header">
-                        <h4 className="modal-title">Edit Buy Report</h4>
+                        <h4 className="modal-title">Edit</h4>
                         <button
                           type="button"
                           className="close"
@@ -33,31 +55,43 @@ export default function EditWork() {
                         <div>
                         <div className="form-group">
                             <input
-                              type="name"
+                              type="text"
                               className="form-control"
-                              id="id"
-                            //   value = {buy_id}
-                            //   onChange={e=>{setId(e.target.value)}}
+                              id="fullname"
+                            value = {fullname}
+                              onChange={e=>{setfullname(e.target.value)}}
                             />
                           </div>
                           <div className="form-group">
                             <input
-                              type="date"
+                              type="phone"
                               className="form-control"
-                              id="date"
-                            //   value = {buy_date}
-                            //   onChange={e=>{setDate(e.target.value)}}
+                              id="phone"
+                               value = {phone}
+                             onChange={e=>{setphone(e.target.value)}}
                             />
                           </div>
+
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="email"
+                               value = {email}
+                               onChange={e=>{setemail(e.target.value)}}
+                            />
+                            </div>
+
                           <div className="form-group">
                             <input
                               type="text"
                               className="form-control"
                               id="status"
-                            //   value = {buy_status}
-                            //   onChange={e=>{setStatus(e.target.value)}}
+                               value = {status}
+                               onChange={e=>{setstatus(e.target.value)}}
                             />
-                          </div>
+                            </div>
+                          
                         </div>
                       </div>
                       {/* Modal footer */}
@@ -66,7 +100,7 @@ export default function EditWork() {
                           type="button"
                           className="btn btn-success"
                           data-dismiss="modal"
-                        //   onClick={e=>{onUpdateData(e)}}
+                      onClick={e=>{onUpdateData(e)}}
                         >
                           Save
                         </button>
@@ -82,6 +116,6 @@ export default function EditWork() {
                   </div>
                 </div>
               </div>
-    // </div>
+     </div>
     )
 }

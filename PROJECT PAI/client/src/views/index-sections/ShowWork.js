@@ -76,7 +76,12 @@ export default function ShowWork() {
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>
                 <td>{elt.status}</td>
-                <td><EditWork/></td>
+                <td><EditWork
+                fullname = {elt.fullname}
+                phone = {elt.phone}
+                email = {elt.email}
+                status = {elt.status}
+                /></td>
               </tr>
               
             );

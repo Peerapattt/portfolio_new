@@ -86,3 +86,27 @@ app.get("/showwork",(req,res) =>{
         }
     })
 })
+
+
+app.put("/updatework/:id", (req, res) => {
+    try {
+      let { id } = req.params;
+      let  {fullname,phone,email,status} = req.body;
+  
+      const sql= `UPDATE customer SET fullname = '${fullname}','${phone}','${email}','${status}' where id = '${id}' `
+  
+      console.log(id);
+      pool.query(sql, (err, results) => {
+        if (err) {
+          res.send(err.message);
+          throw err;
+        }
+        console.log(sql);
+        console.log(results);
+        console.log(sql);
+        res.send("updated successfully");
+      });
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
