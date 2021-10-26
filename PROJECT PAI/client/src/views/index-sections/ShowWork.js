@@ -29,7 +29,7 @@ export default function ShowWork() {
       }, [ID]);
 
     return (
-        <div className="container">
+        <div className="">
       <h1>
             RESUME
       </h1>

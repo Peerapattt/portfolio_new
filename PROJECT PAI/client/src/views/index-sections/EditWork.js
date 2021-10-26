@@ -2,11 +2,11 @@ import React, { useState,useEffect } from 'react'
 
 
 export default function EditWork(props) {
-  const [fullname,setfullname] = useState ([])
-  const [phone,setphone] = useState ([])
-  const [email,setemail] = useState([])
-  const [status,setstatus] = useState([])
-  const [ id,setid] = useState ([])
+  const [fullname,setfullname] = useState (props.fullname)
+  const [phone,setphone] = useState (props.phone)
+  const [email,setemail] = useState(props.email)
+  const [status,setstatus] = useState(props.status)
+  const [ id,setid] = useState (props.id)
 
   const onUpdateData = (e)=>{
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function EditWork(props) {
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(bodyIn)
       })
-      window.location="/buy";
+      window.location="/";
     }catch (err){
         console.error(err.message);
     }
@@ -64,7 +64,7 @@ export default function EditWork(props) {
                           </div>
                           <div className="form-group">
                             <input
-                              type="phone"
+                              type="text"
                               className="form-control"
                               id="phone"
                                value = {phone}

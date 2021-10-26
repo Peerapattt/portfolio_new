@@ -63,7 +63,7 @@ function Index() {
         <Portfolio/>
         <From/>
         <ShowWork/>
-
+      
         {/* <SectionButtons />
         <SectionNavbars />
         <SectionNavigation />
