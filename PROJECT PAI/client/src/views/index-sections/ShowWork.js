@@ -54,12 +54,13 @@ export default function ShowWork() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Full Name</th>
-            <th>Phone </th>
+            <th>Full Name</th>       
+            <th>Phone</th>
             <th>Email</th>
             <th>Work detail</th>
             <th>Work Name</th>
             <th>Date</th>
+            <th>Status</th>
             <th>Edit</th>
           </tr>
         </thead>
@@ -74,6 +75,7 @@ export default function ShowWork() {
                 <td>{elt.work_detail}</td>
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>
+                <td>{elt.status}</td>
                 <td><EditWork/></td>
               </tr>
               

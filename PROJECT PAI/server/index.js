@@ -75,7 +75,7 @@ app.post("/insertwork",(req,res) =>{
 })
 
 app.get("/showwork",(req,res) =>{
-    db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name
+    db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status
     from customer ` , (err,result)=>{
         if(err){
             console.log(err)
