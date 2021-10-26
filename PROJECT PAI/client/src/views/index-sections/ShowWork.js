@@ -55,7 +55,7 @@ export default function ShowWork() {
           <tr>
             <th>ID</th>
             <th>Full Name</th>
-            <th>Phone ID</th>
+            <th>Phone </th>
             <th>Email</th>
             <th>Work detail</th>
             <th>Work Name</th>
