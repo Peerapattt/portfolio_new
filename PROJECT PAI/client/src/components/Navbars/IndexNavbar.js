@@ -68,6 +68,7 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="#"
+            
             title="Coded by Creative Tim"
           >
             Home
@@ -76,6 +77,7 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="#about"
+            target="_blank"
             title="Coded by Creative Tim"
           >
             About
@@ -84,10 +86,14 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/index/code"
+            target="_blank"
             title="สมัครงาน"
           >
             Register
           </NavbarBrand>
+          
+          
+
 
           
 
@@ -143,6 +149,20 @@ function IndexNavbar() {
               >
                 <i className="fa fa-instagram" />
                 <p className="d-lg-none">Instagram</p>
+
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink
+                data-placement="bottom"
+                href="/Edit"
+                target="_blank"
+                title="For Admin"
+              >
+                <i className="fa fa-user"/>
+                <p className="d-lg-none">admin</p>
+                
               </NavLink>
             </NavItem>
             

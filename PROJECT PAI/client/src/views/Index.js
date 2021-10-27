@@ -44,26 +44,47 @@ import About from "./index-sections/About";
 import Portfolio from "./index-sections/Portfolio";
 import ShowWork from "./index-sections/ShowWork";
 import From from "./index-sections/From.js"
+import Edit from "./index-sections/Edit";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Index() {
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("index");
-    return function cleanup() {
-      document.body.classList.remove("index");
-    };
-  });
+  // document.documentElement.classList.remove("nav-open");
+  // React.useEffect(() => {
+  //   document.body.classList.add("index");
+  //   return function cleanup() {
+  //     document.body.classList.remove("index");
+  //   };
+  // });
   return (
     <>
       <IndexNavbar />
       <IndexHeader />
       <div id="home" className="main">
-        <About/>  
-        <Skill/>  
-        <Portfolio/>
-        <From/>
-        <ShowWork/>
-      
+          
+        <Router>
+          <Switch>
+            <Route exact path = "/About">
+            <About/>
+            </Route>
+
+            <Route exact path = "/Portfolio">
+            <Portfolio/>
+            </Route>
+
+            <Route exact path = "/From">
+            <From/>
+            </Route>
+
+            <Route exact path = "/ShowWork">
+            <ShowWork/>
+            </Route>
+
+            <Route  exact path = "/Edit">
+              <Edit/>
+            </Route>
+
+          </Switch>
+        </Router>
         {/* <SectionButtons />
         <SectionNavbars />
         <SectionNavigation />
