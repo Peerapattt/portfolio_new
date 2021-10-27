@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import EditWork from './EditWork';
+import Edit from './Edit';
 
 export default function ShowWork() {
 
@@ -30,26 +31,7 @@ export default function ShowWork() {
 
     return (
         <div className="">
-      <h1>
-            RESUME
-      </h1>
-      <div>
-        {/* <tr className="btn mt-1">
-          <td>
-            <Form.Control
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              onChange={(e) => {
-                setID(e.target.value);
-              }}
-            />
-            {sale_list.map((item) => {
-              return <p>{item.sale_id}</p>;
-            })}
-          </td>
-        </tr> */}
-      </div>
+      <h1>RESUME</h1>
       <table className="table table-striped table-dark">
         <thead>
           <tr>
@@ -77,14 +59,14 @@ export default function ShowWork() {
                 <td>{elt.regdate}</td>
                 <td>{elt.status}</td>
                 <td><EditWork
+                id = {elt.id}
                 fullname = {elt.fullname}
                 phone = {elt.phone}
                 email = {elt.email}
                 status = {elt.status}
                 /></td>
               </tr>
-              
-            );
+            )
           })}
         </tbody>
       </table>

@@ -62,6 +62,7 @@ export default function EditWork(props) {
                               onChange={e=>{setfullname(e.target.value)}}
                             />
                           </div>
+                          
                           <div className="form-group">
                             <input
                               type="text"

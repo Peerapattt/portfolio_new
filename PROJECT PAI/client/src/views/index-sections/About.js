@@ -1,5 +1,6 @@
 import React from 'react'
 import 'assets/css/About.css'
+import Edit from './Edit'
 
 export default function About() {
     return (
@@ -20,12 +21,13 @@ export default function About() {
                         <h3>
                         บริษัท Rosefia ของเรา ยินดีให้บริการ เรามีความมุ่งมั่นในการให้บริการด้วยใจ เรามีการฝึกอบรม เราเน้นคุณภาพของงาน ความถูกต้อง ซื่อสัตย์ 
                         เราพร้อมที่จะดูแล และสนับสนุนคุณ เพื่อให้คุณสามารถเติบโตในธุรกิจได้อย่างมีประสิทธิภาพ " บริการด้วยใจ ใส่ใจในทุกงาน"
-                            </h3>
+                        </h3>
                         <br></br>
                         <br></br>
                         <br></br>
                         <br></br>
                         <br></br>
+                        
                     </div>
                  </div>
             </div>           
