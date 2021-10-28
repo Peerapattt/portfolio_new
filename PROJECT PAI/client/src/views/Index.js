@@ -59,6 +59,7 @@ function Index() {
     <>
       <IndexNavbar />
       <IndexHeader />
+      <ShowWork/>
       <div id="home" className="main">
           
         <Router>
