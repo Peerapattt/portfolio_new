@@ -16,27 +16,36 @@ export default function Edit(props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bodyIn),
       });
-      window.location = "/";
+      window.location = "/ShowWork";
     } catch (err) {
       console.error(err.message);
     }
   };
   return (
-    <div>
-      <button
-        type="button"
-        className="btn btn-dark"
-        data-toggle="modal"
-        data-target={`#id${id}`}
-      >
-        Edit
-      </button>
-
+    <div className="container mt-5">
+      
+      <h1>EDIT</h1>
+      
       <div>
+      <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter Name"
+            id="fullname"
+            value={id}
+            onChange={(e) => {
+              setid(e.target.value);
+            }}
+          />
+        </div>
+
+
         <div className="form-group">
           <input
             type="text"
             className="form-control"
+            placeholder="Enter Name"
             id="fullname"
             value={fullname}
             onChange={(e) => {
@@ -48,6 +57,7 @@ export default function Edit(props) {
           <input
             type="text"
             className="form-control"
+            placeholder="Enter Phone"
             id="phone"
             value={phone}
             onChange={(e) => {
@@ -60,6 +70,7 @@ export default function Edit(props) {
           <input
             type="text"
             className="form-control"
+            placeholder="Enter Email"
             id="email"
             value={email}
             onChange={(e) => {
@@ -72,6 +83,7 @@ export default function Edit(props) {
           <input
             type="text"
             className="form-control"
+            placeholder="Enter Status"
             id="status"
             value={status}
             onChange={(e) => {
@@ -80,15 +92,18 @@ export default function Edit(props) {
           />
         </div>
       </div>
-
+          <div>  
       <button
-        type="submit"
-        name="submit"
-        id="submit"
+        type="button"
         className="btn btn-success"
+        onClick={(e) => {
+          onUpdateData(e);
+        }}
       >
-        Submit
+        Save
       </button>
+      <a className="btn btn-danger ml-3" href="/ShowWork" role="button">Cancel</a>
+      </div>
     </div>
   );
 }

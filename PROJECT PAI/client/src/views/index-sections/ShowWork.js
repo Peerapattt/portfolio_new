@@ -37,10 +37,8 @@ export default function ShowWork() {
           <br></br>
           <br></br>
       <h1>RESUME</h1>
-      
-      <table className="table table-striped table-dark mt-5" >
+      <table className="table table-striped table-dark mt-5">
         <thead>
-          
           <tr>
             <th>ID</th>
             <th>Full Name</th>       
@@ -68,10 +66,16 @@ export default function ShowWork() {
                 
                 <td>
                 <a href="/Edit">
-            <button className="btn btn-success ml-3">edit</button>
+            {/* <button className="btn btn-success ml-3">edit</button> */}
           </a>
                 </td>
-                
+                <td><Edit
+                id = {elt.id}
+                fullname = {elt.fullname}
+                phone = {elt.phone}
+                email = {elt.email}
+                status = {elt.status}
+                /></td>
               </tr>
             )
           })}

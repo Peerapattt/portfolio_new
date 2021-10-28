@@ -100,6 +100,15 @@ function IndexNavbar() {
           >
             Register
           </NavbarBrand>
+
+          <NavbarBrand
+            data-placement="bottom"
+            href="/ShowWork"
+            // target="_blank"
+            title="Coded by Creative Ptoy"
+          >
+            ChowWork
+          </NavbarBrand>
           
           
 
