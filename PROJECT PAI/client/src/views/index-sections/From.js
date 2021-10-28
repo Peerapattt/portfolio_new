@@ -50,8 +50,12 @@ export default function From() {
 
     return (
       <div className="container">
-        <div>
-          <h1 className="mt-5">Register</h1>
+        <div><br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+          <h1>Register</h1>
           <hr />
         </div>
 

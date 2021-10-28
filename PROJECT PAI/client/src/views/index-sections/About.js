@@ -7,7 +7,13 @@ export default function About() {
         <div >
             <div>
                 <div className="container">
-                <h1 id="about" className="mt-5">COMPANY</h1>
+                <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                <h1 id="about">COMPANY</h1>
                     <hr />
                     </div>
                  <div className="container">
