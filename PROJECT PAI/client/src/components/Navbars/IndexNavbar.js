@@ -69,7 +69,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/"
             
-            title="Coded by Creative Ptoy"
+            title="Coded by Creative Folk"
           >
             Home
           </NavbarBrand>
@@ -78,7 +78,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/about"
             // target="_blank"
-            title="Coded by Creative Ptoy"
+            title="Coded by Creative Folk"
           >
             About
           </NavbarBrand>
@@ -87,7 +87,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/condition"
             // target="_blank"
-            title="Coded by Creative Ptoy"
+            title="Coded by Creative Folk"
           >
             Condition
           </NavbarBrand>
@@ -96,7 +96,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/from"
             // target="_blank"
-            title="Coded by Creative Ptoy"
+            title="Coded by Creative Folk"
           >
             Register
           </NavbarBrand>
