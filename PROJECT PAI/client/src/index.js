@@ -45,8 +45,8 @@ ReactDOM.render(
       <Route path="/index" render={(props) => <Index {...props} />} />
       
       <Route  path = "/index">
-          <Home/>
-          <IndexNavbar />
+            <Home/>
+            <IndexNavbar />
             </Route>
             
 

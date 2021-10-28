@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import EditWork from './EditWork';
 import Edit from './Edit';
+import Edittest from './Edittest';
 
 export default function ShowWork() {
 
@@ -64,6 +65,12 @@ export default function ShowWork() {
             <button className="btn btn-success ml-3">edit</button>
           </a>
                 </td>
+                <td><EditWork
+                fullname = {elt.fullname}
+                phone = {elt.phone}
+                email = {elt.email}
+                status = {elt.status}
+                /></td>
               </tr>
             )
           })}
