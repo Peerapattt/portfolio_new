@@ -41,25 +41,27 @@ import SectionExamples from "views/index-sections/SectionExamples.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
 import Skill from "./index-sections/Skill";
 import About from "./index-sections/About";
-import Portfolio from "./index-sections/Portfolio";
+import Condition from "./index-sections/Condition";
 import ShowWork from "./index-sections/ShowWork";
 import From from "./index-sections/From.js"
 import Edit from "./index-sections/Edit";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Index() {
-  // document.documentElement.classList.remove("nav-open");
-  // React.useEffect(() => {
-  //   document.body.classList.add("index");
-  //   return function cleanup() {
-  //     document.body.classList.remove("index");
-  //   };
-  // });
+  document.documentElement.classList.remove("nav-open");
+  React.useEffect(() => {
+    document.body.classList.add("index");
+    return function cleanup() {
+      document.body.classList.remove("index");
+    };
+  });
   return (
     <>
       <IndexNavbar />
       <IndexHeader />
       <ShowWork/>
+      <Condition/>
+      <From/>
       <div id="home" className="main">
           
         <Router>
@@ -68,8 +70,8 @@ function Index() {
             <About/>
             </Route>
 
-            <Route exact path = "/Portfolio">
-            <Portfolio/>
+            <Route exact path = "/Condition">
+            <Condition/>
             </Route>
 
             <Route exact path = "/From">
