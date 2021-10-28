@@ -77,7 +77,7 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/about"
-            // target="_blank"
+           
             title="Coded by Creative Tim"
           >
             About
@@ -86,7 +86,7 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/from"
-            // target="_blank"
+           
             title="สมัครงาน"
           >
             Register

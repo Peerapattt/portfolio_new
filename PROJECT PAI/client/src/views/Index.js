@@ -61,10 +61,7 @@ function Index() {
       <IndexNavbar />
       {/* <IndexHeader /> */}
       {/* <div id="home" className="main"> */}
-      <IndexHeader />
-      <ShowWork/>
-      <Condition/>
-      <From/>
+      
       <div id="home" className="main">
           
         <Router>
