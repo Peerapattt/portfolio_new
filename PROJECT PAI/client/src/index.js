@@ -78,7 +78,7 @@ ReactDOM.render(
             </Route>
 
             <Route   exact path = "/Login">
-            <Login />
+            <Login/>
             </Route>
 
             <Route   exact path = "/Demo">

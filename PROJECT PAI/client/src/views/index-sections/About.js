@@ -6,6 +6,9 @@ import Edit from "./Edit";
 export default function About() {
   return (
     <div>
+      
+      
+           
       <div >
       
         <div className="container">
@@ -16,7 +19,8 @@ export default function About() {
           <h1 id="about">Company</h1>
           <hr />
         </div>
-      
+        {/* <img src="../assets/img/folkthegang.jpg" /> */}
+
         <div className="container">
           <div className>
           
@@ -50,11 +54,7 @@ export default function About() {
           </div>
         </div>
 
-        <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/fabio-mangione.jpg").default}
-            />
+      
 
 
       </div>
