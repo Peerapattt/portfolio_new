@@ -55,7 +55,7 @@ ReactDOM.render(
             <IndexNavbar />
             </Route>
 
-            <Route exact path = "/Portfolio">
+            <Route exact path = "/Condition">
             <Condition/>
             <IndexNavbar />
             </Route>
