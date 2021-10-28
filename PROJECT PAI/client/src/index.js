@@ -30,28 +30,49 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
+import Home from "views/index-sections/Home";
+import About from "views/index-sections/About";
+import Portfolio from "views/index-sections/Portfolio";
+import ShowWork from "views/index-sections/ShowWork";
+import From from "views/index-sections/From.js"
+import Edit from "views/index-sections/Edit";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
 // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={(props) => <Index {...props} />} />
-      <Route
-        path="/nucleo-icons"
-        render={(props) => <NucleoIcons {...props} />}
-      />
-      <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
-        render={(props) => <ProfilePage {...props} />}
-      />
-      <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
-      />
+      
+      <Route  path = "/index">
+          <Home/>
+          <IndexNavbar />
+            </Route>
+            
+
+            <Route  path = "/About">
+            <About/>
+            <IndexNavbar />
+            </Route>
+
+            <Route exact path = "/Portfolio">
+            <Portfolio/>
+            <IndexNavbar />
+            </Route>
+
+            <Route exact path = "/From">
+            <From/>
+            <IndexNavbar />
+            </Route>
+
+            <Route exact path = "/ShowWork">
+            <ShowWork/>
+            <IndexNavbar />
+            </Route>
+
+            <Route  exact path = "/Edit">
+              <Edit/>
+            </Route>
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,

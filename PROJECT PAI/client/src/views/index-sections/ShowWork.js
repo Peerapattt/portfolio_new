@@ -58,13 +58,12 @@ export default function ShowWork() {
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>
                 <td>{elt.status}</td>
-                <td><EditWork
-                id = {elt.id}
-                fullname = {elt.fullname}
-                phone = {elt.phone}
-                email = {elt.email}
-                status = {elt.status}
-                /></td>
+                
+                <td>
+                <a href="/Edit">
+            <button className="btn btn-success ml-3">edit</button>
+          </a>
+                </td>
               </tr>
             )
           })}
