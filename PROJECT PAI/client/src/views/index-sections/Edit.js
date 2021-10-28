@@ -10,7 +10,7 @@ export default function Edit(props) {
   const onUpdateData = (e) => {
     e.preventDefault();
     try {
-      const bodyIn = { fullname, phone, email, status };
+      const bodyIn = { id,fullname, phone, email, status };
       const res = fetch(`http://localhost:6060/updatework/${id}`, {
         method: "put",
         headers: { "Content-Type": "application/json" },
