@@ -2,20 +2,26 @@ import React from "react";
 import "assets/css/About.css";
 import Edit from "./Edit";
 
+
 export default function About() {
   return (
     <div>
-      <div className="">
+      <div >
+      
         <div className="container">
           <br></br>
           <br></br>
           <br></br>
-
-          <h1 id="about">COMPANY</h1>
+       
+          <h1 id="about">Company</h1>
           <hr />
         </div>
+      
         <div className="container">
           <div className>
+          
+    
+
             <h3>
               บริษัทนี้เปรียบเสมือนสังกัดที่เหล่าฟรีแลนซ์ต่าง ๆ
               ที่มีความสามารถแตกต่างกันไปตามหมวดหมู่ความถนัดของแต่ละคน
@@ -32,6 +38,9 @@ export default function About() {
               บริการด้วยใจ ใส่ใจในทุกงาน"
             </h3>
             
+            
+
+
             <br></br>
             <br></br>
             <br></br>
@@ -40,6 +49,14 @@ export default function About() {
             
           </div>
         </div>
+
+        <img
+              alt="..."
+              className="creative-tim-logo"
+              src={require("assets/img/fabio-mangione.jpg").default}
+            />
+
+
       </div>
     </div>
   );

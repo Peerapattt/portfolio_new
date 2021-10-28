@@ -167,7 +167,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="/"
+                href="/Login"
                 // target="_blank"
                 title="For Admin"
               >

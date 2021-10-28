@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const { query } = require('express');
 const port = 6060;
+const multer = require('multer');
 
 app.use(cors({ 
     origin:true,
@@ -110,3 +111,22 @@ app.put("/updatework/:id", (req, res) => {
       console.error(err.message);
     }
   });
+
+
+
+  const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+    cb(null, '../client/public/uploads')
+    },
+    filename: function (req, file, cb) {
+    cb(null, Date.now() + ".png")
+    }
+    })
+    const upload = multer({ storage: storage })
+    app.get('/', (req, res) => {
+    res.send('Hello Upload')
+    })
+    app.post('/upload', upload.single('file'),  (req, res) => { 
+    
+    res.send(req.file)
+    })
