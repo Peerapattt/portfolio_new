@@ -20,6 +20,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import 'assets/css/nav.css'
 
 // reactstrap components
 import {
@@ -64,6 +65,7 @@ function ExamplesNavbar() {
     };
   });
   return (
+
     <Navbar
       className={classnames("fixed-top", navbarColor)}
       color-on-scroll="300"
@@ -169,6 +171,7 @@ function ExamplesNavbar() {
         </Collapse>
       </Container>
     </Navbar>
+   
   );
 }
 

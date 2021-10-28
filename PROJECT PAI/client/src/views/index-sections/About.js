@@ -5,7 +5,7 @@ import Edit from './Edit'
 export default function About() {
     return (
         <div >
-            <div >
+            <div className = "">
                 <div className="container">
                 <h1 id="about" className="mt-5">COMPANY</h1>
                     <hr />

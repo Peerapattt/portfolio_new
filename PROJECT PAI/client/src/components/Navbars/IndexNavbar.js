@@ -20,6 +20,7 @@ import React from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
 // reactstrap components
+import 'assets/css/nav.css'
 import {
   Button,
   Collapse,
@@ -53,7 +54,7 @@ function IndexNavbar() {
       ) {
         setNavbarColor("navbar-transparent");
       }
-    };
+    }
 
     window.addEventListener("scroll", updateNavbarColor);
 
@@ -62,6 +63,7 @@ function IndexNavbar() {
     };
   });
   return (
+    <div className ="bg-nav">
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
@@ -170,6 +172,7 @@ function IndexNavbar() {
         </Collapse>
       </Container>
     </Navbar>
+    </div>
   );
 }
 

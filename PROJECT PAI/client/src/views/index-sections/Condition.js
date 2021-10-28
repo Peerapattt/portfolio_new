@@ -20,7 +20,7 @@ export default function Portfolio() {
         }
       }
     return (
-        <div>
+        <div className="main-condition">
             <div >
             <div> 
                         <br></br>
@@ -128,7 +128,7 @@ export default function Portfolio() {
 
                 <div>
                     <div><h1></h1></div>
-                {/* <div className = "img-port"><img alt="..."src={require("assets/img/port1.jpg").default}/></div> */}
+                
                 </div>
             </div>
             </div>
