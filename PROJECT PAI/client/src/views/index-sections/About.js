@@ -19,7 +19,7 @@ export default function About() {
       
         <div className="container">
           <div className>
-          <h1>ผู้ก่อตั้งบริษัท</h1>
+          
     
 
             <h3>
@@ -49,6 +49,14 @@ export default function About() {
             
           </div>
         </div>
+
+        <img
+              alt="..."
+              className="creative-tim-logo"
+              src={require("assets/img/fabio-mangione.jpg").default}
+            />
+
+
       </div>
     </div>
   );

@@ -38,6 +38,8 @@ import From from "views/index-sections/From.js"
 import Edit from "views/index-sections/Edit";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Login from "views/index-sections/Login.js";
+import Demo from "views/index-sections/Demo.js";
+import axios from "axios";
 // others
 
 ReactDOM.render(
@@ -76,8 +78,11 @@ ReactDOM.render(
             </Route>
 
             <Route   exact path = "/Login">
-            <About/>
             <Login />
+            </Route>
+
+            <Route   exact path = "/Demo">
+            <Demo />
             </Route>
 
       <Redirect to="/index" />
