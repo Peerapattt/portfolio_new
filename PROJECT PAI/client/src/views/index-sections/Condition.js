@@ -50,19 +50,17 @@ export default function Portfolio() {
   };
   return (
     <div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      
       <br></br>
       <br></br>
       <br></br>
 
 
       <div className="container">
-            <div className="port-frame">
+            
               <h1>Condition</h1>
-            </div>
+              <hr />
+            
           </div>
 
 
@@ -72,13 +70,15 @@ export default function Portfolio() {
           <div className="row">
             <div className="col-3">
               <div>
-                
-                <div>
+              <br></br>
+          <br></br>
+              <div className="border-con">
+                <div className="text-con">
             <h2>Video Editor</h2>
           </div>
           <br></br>
           <br></br>
-    
+          <div className="container">
                 <div className="text-editor">
                   <h3 >
                     1.เชี่ยวชาญในการใช้ซอฟต์แวร์ตัดต่อวิดีโอ อาทิ Adobe Premier
@@ -99,7 +99,7 @@ export default function Portfolio() {
                     4.มีความคิดสร้างสรรค์ ละเอียดรอบคอบ มีความรับผิดชอบสูง
                     และมีทัศนคติเชิงบวก
                   </h3>
-
+</div>
                   <h3>5.ถ้ามีพื้นฐานความรู้ทางภาษาอังกฤษจะพิจารณาเป็นพิเศษ</h3>
                   <div className="container">
                     <div className="helloBG">
@@ -118,16 +118,22 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
             </div>
-
+            
+            
             <div class="col-4">
-              <div>
-                <div>
+            <br></br>
+            <br></br>
+          
+            <div className="border-con">
+                <div className="text-con">
                   <h2>Graphic Designer</h2>
                 </div>
                 <br></br>
                 <br></br>
+                <div className="container">
                 <div className="text-editor">
                   <h3>
                     1.ออกแบบงานกราฟิกและสื่อโฆษณาให้ถูกต้องตรงตามแผนงานที่การตลาดกำหนด
@@ -163,8 +169,10 @@ export default function Portfolio() {
                     8.ดูแลและรับผิดชอบอุปกรณ์เครื่องมือที่ใช้ในการทำงานด้านกราฟฟิกดีไซน์
                     ทั้ง Hardware และ Softwareให้ถูกต้องพร้อมใช้งานอยู่เสมอ
                   </h3>
-
+                  </div>
                   <div>
+                  <div className="container">
+
                     <div className="helloBG">
                       <br></br>
                       <br></br>
@@ -180,17 +188,22 @@ export default function Portfolio() {
                       <br></br>
                     </div>
                   </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <div>
-                <div>
-                  <div>
+              <br></br>
+            <br></br>
+          
+            <div className="border-con">
+                <div className="text-con">
                     <h2>Web Developer </h2>
                   </div>
                   <br></br>
                   <br></br>
+                  <div className="container">
                   <div className="text-editor">
                   
                     
@@ -204,7 +217,7 @@ export default function Portfolio() {
                     <h3>3.รวบรวม requirement</h3>
 
                     <h3>4.รวบรวม requirement</h3>
-
+</div>
                     <div className="container">
                       <div className="helloBG">
                         <br></br>

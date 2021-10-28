@@ -37,6 +37,7 @@ import ShowWork from "views/index-sections/ShowWork";
 import From from "views/index-sections/From.js"
 import Edit from "views/index-sections/Edit";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import Login from "views/index-sections/Login.js";
 // others
 
 ReactDOM.render(
@@ -73,6 +74,12 @@ ReactDOM.render(
             <Route  exact path = "/Edit">
               <Edit/>
             </Route>
+
+            <Route   exact path = "/Login">
+            <About/>
+            <Login />
+            </Route>
+
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,

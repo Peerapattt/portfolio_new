@@ -55,7 +55,7 @@ export default function From() {
                         <br></br>
                         <br></br>
                         <br></br>
-          <h1>Register</h1>
+          <h1>Contract</h1>
           <hr />
         </div>
 

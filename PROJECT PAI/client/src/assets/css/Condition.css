@@ -17,9 +17,20 @@
 }
 .text-editor{
     font-size: 12px;
+
 }
 
 .con-con{
-    margin-left: 15%;
+    margin-left: 10%;
+    
+}
+
+.border-con{
+    border:solid ;
+}
+.text-con{
+    border-color: black;
+    background-color: rgb(247, 230, 255);
+    text-align: center;
     
 }

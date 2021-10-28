@@ -36,7 +36,7 @@ export default function ShowWork() {
           <br></br>
           <br></br>
           <br></br>
-      <h1>RESUME</h1>
+      <h1>Edit </h1>
       <table className="table table-striped table-dark mt-5">
         <thead>
           <tr>
