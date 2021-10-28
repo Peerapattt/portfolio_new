@@ -69,7 +69,7 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/"
             
-            title="Coded by Creative Tim"
+            title="Coded by Creative Ptoy"
           >
             Home
           </NavbarBrand>
@@ -78,16 +78,25 @@ function IndexNavbar() {
             data-placement="bottom"
             href="/about"
             // target="_blank"
-            title="Coded by Creative Tim"
+            title="Coded by Creative Ptoy"
           >
             About
           </NavbarBrand>
 
           <NavbarBrand
             data-placement="bottom"
+            href="/condition"
+            // target="_blank"
+            title="Coded by Creative Ptoy"
+          >
+            Condition
+          </NavbarBrand>
+
+          <NavbarBrand
+            data-placement="bottom"
             href="/from"
             // target="_blank"
-            title="สมัครงาน"
+            title="Coded by Creative Ptoy"
           >
             Register
           </NavbarBrand>
