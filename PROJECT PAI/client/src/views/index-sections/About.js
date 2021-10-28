@@ -10,9 +10,7 @@ export default function About() {
                 <br></br>
                         <br></br>
                         <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
+
                 <h1 id="about">COMPANY</h1>
                     <hr />
                     </div>

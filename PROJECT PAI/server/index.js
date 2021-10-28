@@ -92,9 +92,8 @@ app.put("/updatework/:id", (req, res) => {
     try {
       let { id } = req.params;
       let  {fullname,phone,email,status} = req.body;
-  
-      const sql= `UPDATE customer SET fullname = '${fullname}','${phone}','${email}','${status}' where id = '${id}' `
-  
+      const sql= `UPDATE customer SET fullname = '${fullname}',phone ='${phone}',email ='${email}',status ='${status}' where id = '${id}' `
+      console.log(fullname,phone,email,status)
       console.log(id);
       pool.query(sql, (err, results) => {
         if (err) {

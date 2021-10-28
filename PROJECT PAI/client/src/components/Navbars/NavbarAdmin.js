@@ -94,21 +94,14 @@ function IndexNavbar() {
 
           <NavbarBrand
             data-placement="bottom"
-            href="/from"
-            // target="_blank"
-            title="Coded by Creative Ptoy"
-          >
-            Register
-          </NavbarBrand>
-
-          <NavbarBrand
-            data-placement="bottom"
             href="/ShowWork"
             // target="_blank"
             title="Coded by Creative Ptoy"
           >
-            ChowWork
+            Edit
           </NavbarBrand>
+
+          
           
           
 
@@ -191,4 +184,4 @@ function IndexNavbar() {
   );
 }
 
-export default IndexNavbar;
+export default NavbarAdmin;
