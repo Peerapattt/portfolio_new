@@ -65,12 +65,7 @@ export default function ShowWork() {
             <button className="btn btn-success ml-3">edit</button>
           </a>
                 </td>
-                <td><EditWork
-                fullname = {elt.fullname}
-                phone = {elt.phone}
-                email = {elt.email}
-                status = {elt.status}
-                /></td>
+                
               </tr>
             )
           })}

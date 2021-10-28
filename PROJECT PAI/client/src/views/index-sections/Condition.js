@@ -25,6 +25,7 @@ export default function Portfolio() {
             <div> 
                         <br></br>
                         <br></br>
+                        
                 <div className = "container">
                     <div className = "port-frame"><h1>Condition</h1></div>
                 </div>
