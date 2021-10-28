@@ -32,9 +32,15 @@ export default function ShowWork() {
 
     return (
         <div className="">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
       <h1>RESUME</h1>
-      <table className="table table-striped table-dark">
+      
+      <table className="table table-striped table-dark mt-5" >
         <thead>
+          
           <tr>
             <th>ID</th>
             <th>Full Name</th>       
