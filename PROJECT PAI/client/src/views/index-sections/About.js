@@ -10,7 +10,7 @@ export default function About() {
       
            
       <div >
-      
+        
         <div className="container">
           <br></br>
           <br></br>
@@ -19,12 +19,15 @@ export default function About() {
           <h1 id="about">Company</h1>
           <hr />
         </div>
-        {/* <img src="../assets/img/folkthegang.jpg" /> */}
-
+        <div>
+        <div className ="img_1"><img src="https://github.com/Peerapattt/portfolio_new/blob/main/PROJECT%20PAI/client/src/assets/img/folkthegang.jpg?raw=true" /></div>
+        </div>
+        <br></br>
+        <br></br>
         <div className="container">
-          <div className>
-          
-    
+          <div>
+          <h3> ชายคนนี้คือผู้ก่อตั้งบริษัท Rosefia ขึ้นมาเขาชื่อว่าโฟล์ค มีชื่อจริงว่า นายพีรพัฒน์ เยียรงค์ เขาได้เรียนอยู่ที่มหาวิทยาลัยบูรพา วิทยาเขตจันทบุรี
+                 ซึ่งสาขาที่เขาเรียนอยู่เป็นสาขาเทคโนโลยีสารสนเทศ เป็นสาขาที่เรียนเกี่ยวกับข้อมูลสารสนเทศและการเขียนโค้ดต่าง ๆ </h3>
 
             <h3>
               บริษัทนี้เปรียบเสมือนสังกัดที่เหล่าฟรีแลนซ์ต่าง ๆ
@@ -42,7 +45,7 @@ export default function About() {
               บริการด้วยใจ ใส่ใจในทุกงาน"
             </h3>
             
-            
+           
 
 
             <br></br>
