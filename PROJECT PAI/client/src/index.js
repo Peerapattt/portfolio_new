@@ -32,7 +32,7 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import Home from "views/index-sections/Home";
 import About from "views/index-sections/About";
-import Portfolio from "views/index-sections/Portfolio";
+import Condition from "views/index-sections/Condition";
 import ShowWork from "views/index-sections/ShowWork";
 import From from "views/index-sections/From.js"
 import Edit from "views/index-sections/Edit";
@@ -56,7 +56,7 @@ ReactDOM.render(
             </Route>
 
             <Route exact path = "/Portfolio">
-            <Portfolio/>
+            <Condition/>
             <IndexNavbar />
             </Route>
 
