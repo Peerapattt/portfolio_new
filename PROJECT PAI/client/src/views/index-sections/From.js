@@ -1,6 +1,8 @@
 
 import React, { useState,useEffect } from 'react'
 import SelectWorkname from './SelectWorkname'
+import "assets/css/From.css";
+
 
 export default function From() {
   const [list,setList] = useState ()
@@ -50,14 +52,14 @@ export default function From() {
 
     return (
       <div className="container">
-        <div><br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-          <h1>Contract</h1>
-          <hr />
+      <br></br>
+       <br></br>
+        <br></br>
+    <div className="color-fr">             
+          <h1>Form</h1>
+
         </div>
+        <hr />
 
       <form onSubmit={insertwork}>
   <div className="form-group mt-5" onChange={e=>{

@@ -9,14 +9,15 @@ export default function About() {
       
       
            
-      <div >
+      <div>
         
         <div className="container">
           <br></br>
           <br></br>
           <br></br>
-       
+       <div className = "color-ab">
           <h1 id="about">Company</h1>
+          </div>
           <hr />
         </div>
         <div>

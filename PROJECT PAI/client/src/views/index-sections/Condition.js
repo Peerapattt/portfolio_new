@@ -57,8 +57,9 @@ export default function Portfolio() {
 
 
       <div className="container">
-            
+      <div className ="color-cd">
               <h1>Condition</h1>
+              </div>
               <hr />
             
           </div>
@@ -74,7 +75,9 @@ export default function Portfolio() {
           <br></br>
               <div className="border-con">
                 <div className="text-con">
+                  
             <h2>Video Editor</h2>
+            
           </div>
           <br></br>
           <br></br>

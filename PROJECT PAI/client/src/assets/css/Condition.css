@@ -10,18 +10,23 @@
     padding: 20px;
     background: #99FFFF		;
     font-weight: 100px;
+
+    
 }
 .port-video{
     padding-left: 5%;
     
+    
 }
 .text-editor{
     font-size: 12px;
+    
 
 }
 
 .con-con{
     margin-left: 10%;
+    
     
 }
 
@@ -33,4 +38,10 @@
     background-color: rgb(247, 230, 255);
     text-align: center;
     
+}
+
+.color-cd{
+    background-color: rgb(255, 203, 203);
+    margin-left: 20%;
+    margin-right: 20%;
 }

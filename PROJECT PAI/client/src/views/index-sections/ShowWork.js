@@ -3,6 +3,8 @@ import EditWork from './EditWork';
 import Edit from './Edit';
 import Edittest from './Edittest';
 import { Form } from 'react-bootstrap';
+import "assets/css/ShowWork.css";
+
 
 export default function ShowWork() {
   const [fullname, setfullname] = useState();
@@ -56,8 +58,9 @@ export default function ShowWork() {
           <br></br>
           <br></br>
           <br></br>
+          <div className="color-sw">
       <h1>Resume</h1>
-
+      </div>
       <hr />
 
       </div>
