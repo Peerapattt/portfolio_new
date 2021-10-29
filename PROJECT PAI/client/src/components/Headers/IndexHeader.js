@@ -52,9 +52,12 @@ function IndexHeader() {
                 />
               </div>
             </div>
+
+            <br></br>
             <h2 className="presentation-subtitle text-center">
             When you have a dream, you’ve got to grab it and never let go.
             </h2>
+            <h2 className="presentation-subtitle text-center">เมื่อคุณมีความฝันคุณจะต้องคว้ามันและไม่ปล่อยให้ไป</h2>
           </Container>
         </div>
         <div
@@ -70,11 +73,7 @@ function IndexHeader() {
             href="https://www.creative-tim.com?ref=pkr-index-page"
             target="_blank"
           >
-            <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/creative-tim-white-slim2.png").default}
-            />
+           
           </a>
         </h6>
       </div>

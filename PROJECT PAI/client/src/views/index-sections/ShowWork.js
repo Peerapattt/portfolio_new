@@ -18,7 +18,7 @@ export default function ShowWork() {
     console.log("Enter useEffect()");
     loadList();
   }, []);
-    const loadList = async () => {     ///รับค่า
+    const loadList = async () => {     ///รับค่า         ///ไม่มีmodal
         try {
           const resp = await fetch(`http://localhost:6060/showwork`);
           const jsonData = await resp.json();
@@ -113,16 +113,20 @@ export default function ShowWork() {
             }}
           /></td>
                 {/* <td>{elt.email}</td> */}
+
+
+
+
                 <td><Form.Control
             class="form-control mr-sm-2"
             type="search"
-            placeholder={elt.email}
+            placeholder={elt.email} 
             onChange={(e) => {
               setemail(e.target.value);
             }}
-          /></td>
+          /></td>                                   
                 <td>{elt.work_detail}</td>
-                <td>{elt.work_name}</td>
+                <td>{elt.work_name}</td>  
                 <td>{elt.regdate}</td>
                 {/* <td>{elt.status}</td> */}
                 <td><Form.Control

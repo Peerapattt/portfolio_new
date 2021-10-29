@@ -6,12 +6,14 @@ import "assets/css/From.css";
 
 export default function From() {
   const [list,setList] = useState ()
-
+  
   const [work_name,setName] = useState ()
+  const [work_detail,setworkdetail] = useState ()
   const [fullname,setfullname] = useState ()
   const [phone,setphone] = useState ()
   const [email,setemail] = useState ()
-  const [work_detail,setworkdetail] = useState ()
+
+ 
 
 
   const insertwork =(e) =>{
