@@ -84,8 +84,8 @@ export default function From() {
       <label htmlFor="email" className="form-label">Email</label>
       <input type="email" className="form-control" id="email" name="email" required  onChange={(x=>{ setemail(x.target.value)})}/>
     </div>
-    
-    <button type="submit" name="submit" id="submit" className="btn btn-success">Submit</button>
+  
+    <button type="submit" name="submit" id="submit" className="btn btn-danger">Submit</button>
 
   </form>
   <br></br>

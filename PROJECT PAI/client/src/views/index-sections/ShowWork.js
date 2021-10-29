@@ -16,7 +16,7 @@ export default function ShowWork() {
     console.log("Enter useEffect()");
     loadList();
   }, []);
-    const loadList = async () => {
+    const loadList = async () => {     ///รับค่า
         try {
           const resp = await fetch(`http://localhost:6060/showwork`);
           const jsonData = await resp.json();
@@ -29,7 +29,7 @@ export default function ShowWork() {
           console.error(err.message);
         }
       };
-      const onUpdateWork = (e) => {
+      const onUpdateWork = (e) => {    /// this is update 
         e.preventDefault();
         try {
           const bodyIn = { id,fullname, phone, email, status };
@@ -50,13 +50,18 @@ export default function ShowWork() {
       }, [ID]);
 
     return (
-        <div className="">
+        <div>
+          <div className= "container">
           <br></br>
           <br></br>
           <br></br>
           <br></br>
       <h1>Resume</h1>
 
+      <hr />
+
+      </div>
+      
       <table className="table table-striped table-dark mt-5">
       {/* <form> */}
         <thead>
