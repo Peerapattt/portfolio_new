@@ -47,7 +47,7 @@ export default function ShowWork() {
       useEffect(() => {
         console.log("Enter useEffect()");
         loadList();
-      }, [ID]);
+      }, [id]);
 
     return (
         <div className="">
@@ -81,7 +81,7 @@ export default function ShowWork() {
                 {/* <td>{elt.id}</td> */}
                 <td><Form.Control
             class="form-control mr-sm-2"
-            type="search"
+            type="input"
             placeholder={elt.id}
             onChange={(e) => {
               setid(e.target.value);

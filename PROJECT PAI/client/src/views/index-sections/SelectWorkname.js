@@ -27,11 +27,11 @@ export default function SelectWorkname() {
          <label htmlFor="work_detail" className="form-label">Work Name</label>
       <Form.Select aria-label="Default select" className="form-control">
         <option value="name detail">Select Work</option>
-        {work_name.map((ids) => {
+        {work_name.map((a) => {
           return (
             <>
-              <option value={ids.work_name} placeholder="Name">
-                {ids.work_name}
+              <option value={a.work_name} placeholder="Name">
+                {a.work_name}
               </option>
 
             </>

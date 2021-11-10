@@ -58,30 +58,30 @@ ReactDOM.render(
             <IndexNavbar />
             </Route>
 
-            <Route exact path = "/Condition">
+            <Route path = "/Condition">
             <Condition/>
             <IndexNavbar />
             </Route>
 
-            <Route exact path = "/From">
+            <Route path = "/From">
             <From/>
             <IndexNavbar />
             </Route>
 
-            <Route exact path = "/ShowWork">
+            <Route  path = "/ShowWork">
             <ShowWork/>
             <IndexNavbar />
             </Route>
 
-            <Route  exact path = "/Edit">
+            <Route  path = "/Edit">
               <Edit/>
             </Route>
 
-            <Route   exact path = "/Login">
+            <Route    path = "/Login">
             <Login/>
             </Route>
 
-            <Route   exact path = "/Demo">
+            <Route    path = "/Demo">
             <Demo />
             </Route>
 
