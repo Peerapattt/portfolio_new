@@ -132,6 +132,24 @@ app.put("/updatework/:id", (req, res) => {
     })
 
 
+app.delete("/delete/id",(req,res) =>{
+
+    const id = req.params; 
+    
+    db.query(`DELETE FROM customer WHERE id = ${id}` , (err,result)=>{
+        if(err){
+            console.log(err)
+        
+        }
+        else{
+            res.send(result)
+        }
+    })
+})
+
+
+
+
     // app.post('/iflogin',async (req,res) => {
 
 
