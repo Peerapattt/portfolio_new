@@ -47,7 +47,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/index" render={(props) => <Index {...props} />} />
       
-      <Route  path = "/index">
+            <Route  path = "/index">
             <Home/>
             <IndexNavbar />
             </Route>
