@@ -29,8 +29,8 @@ export default function SelectStatus() {
           {Status.map((a) => {
             return (
               <>
-                <option value={a.Status} placeholder="Name">
-                  {a.Status}
+                <option value={a.status_name} placeholder="Name">
+                  {a.status_name}
                 </option>
   
               </>
