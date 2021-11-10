@@ -3,6 +3,8 @@ import EditWork from './EditWork';
 import Edit from './Edit';
 import Edittest from './Edittest';
 import { Form } from 'react-bootstrap';
+import "assets/css/ShowWork.css";
+
 
 export default function ShowWork() {
   const [fullname, setfullname] = useState();
@@ -16,7 +18,7 @@ export default function ShowWork() {
     console.log("Enter useEffect()");
     loadList();
   }, []);
-    const loadList = async () => {
+    const loadList = async () => {     ///รับค่า         ///ไม่มีmodal
         try {
           const resp = await fetch(`http://localhost:6060/showwork`);
           const jsonData = await resp.json();
@@ -29,7 +31,7 @@ export default function ShowWork() {
           console.error(err.message);
         }
       };
-      const onUpdateWork = (e) => {
+      const onUpdateWork = (e) => {    /// this is update 
         e.preventDefault();
         try {
           const bodyIn = { id,fullname, phone, email, status };
@@ -50,14 +52,19 @@ export default function ShowWork() {
       }, [id]);
 
     return (
-        <div className="">
+        <div>
+          <div className= "container">
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-      <h1>RESUME</h1>
+          <div className="color-sw">
+      <h1>Resume</h1>
+      </div>
+      <hr />
 
-      <h1>Edit </h1>
+      </div>
+      
       <table className="table table-striped table-dark mt-5">
       {/* <form> */}
         <thead>
@@ -106,16 +113,20 @@ export default function ShowWork() {
             }}
           /></td>
                 {/* <td>{elt.email}</td> */}
+
+
+
+
                 <td><Form.Control
             class="form-control mr-sm-2"
             type="search"
-            placeholder={elt.email}
+            placeholder={elt.email} 
             onChange={(e) => {
               setemail(e.target.value);
             }}
-          /></td>
+          /></td>                                   
                 <td>{elt.work_detail}</td>
-                <td>{elt.work_name}</td>
+                <td>{elt.work_name}</td>  
                 <td>{elt.regdate}</td>
                 {/* <td>{elt.status}</td> */}
                 <td><Form.Control

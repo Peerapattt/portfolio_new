@@ -29,7 +29,7 @@ return(
 <input type="file" 
      onChange={handleUploadImage} 
    />
-   <button onClick={onClickUpload}> Upload </button> 
+   <button class="btn btn-primary" onClick={onClickUpload}> Upload </button> 
 </React.Fragment>
 )
 }

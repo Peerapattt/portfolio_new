@@ -1,15 +1,19 @@
 
 import React, { useState,useEffect } from 'react'
 import SelectWorkname from './SelectWorkname'
+import "assets/css/From.css";
+
 
 export default function From() {
   const [list,setList] = useState ()
-
+  
   const [work_name,setName] = useState ()
+  const [work_detail,setworkdetail] = useState ()
   const [fullname,setfullname] = useState ()
   const [phone,setphone] = useState ()
   const [email,setemail] = useState ()
-  const [work_detail,setworkdetail] = useState ()
+
+ 
 
 
   const insertwork =(e) =>{
@@ -50,14 +54,14 @@ export default function From() {
 
     return (
       <div className="container">
-        <div><br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-          <h1>Contract</h1>
-          <hr />
+      <br></br>
+       <br></br>
+        <br></br>
+    <div className="color-fr">             
+          <h1>Form</h1>
+
         </div>
+        <hr />
 
       <form onSubmit={insertwork}>
   <div className="form-group mt-5" onChange={e=>{
@@ -84,8 +88,8 @@ export default function From() {
       <label htmlFor="email" className="form-label">Email</label>
       <input type="email" className="form-control" id="email" name="email" required  onChange={(x=>{ setemail(x.target.value)})}/>
     </div>
-    
-    <button type="submit" name="submit" id="submit" className="btn btn-success">Submit</button>
+  
+    <button type="submit" name="submit" id="submit" className="btn btn-danger">Submit</button>
 
   </form>
   <br></br>

@@ -4,7 +4,7 @@ import SkillBar from "react-skillbars";
 
 export default function Portfolio() {
   const skills = [
-    { type: "PremierPro", level: 60 },
+    { type: "PremierPro", level: 60 },   ///Video Editor
     { type: "AdobeAfter", level: 50 },
     { type: "Photoshop", level: 80 },
     { type: "Illustrator", level: 75 },
@@ -12,14 +12,14 @@ export default function Portfolio() {
   ];
   const skills2 = [
     { type: "AdobeID", level: 70 },
-    { type: "3D max", level: 50 },
+    { type: "3D max", level: 50 },       ///Graphic Designer
     { type: "Photoshop", level: 80 },
     { type: "Illustrator", level: 75 },
     { type: "Audition", level: 60 },
   ];
   const skills3 = [
     { type: "HTML", level: 80 },
-    { type: "CSS3", level: 50 },
+    { type: "CSS3", level: 50 },          ///Web Developer
     { type: "Bootstrap", level: 50 },
     { type: "ReactJS", level: 60 },
     { type: "javascript", level:70 },
@@ -28,14 +28,14 @@ export default function Portfolio() {
   const colors = {
     bar: "#CC0000",
     title: {
-      text: "#000000",
+      text: "#000000",                ///Video Editor
       background: "#66CCFF",
     },
   };
 
   const colors2 = {
     bar: "#2E8B579",
-    title: {
+    title: {                          ///Graphic Designer
       text: "#000000",
       background: "#66CCFF	",
     },
@@ -43,7 +43,7 @@ export default function Portfolio() {
 
   const colors3 = {
     bar: "#0000FF",
-    title: {
+    title: {                        ///Web Developer
       text: "#000000",
       background: "#66CCFF",
     },
@@ -57,8 +57,9 @@ export default function Portfolio() {
 
 
       <div className="container">
-            
+      <div className ="color-cd">
               <h1>Condition</h1>
+              </div>
               <hr />
             
           </div>
@@ -74,7 +75,9 @@ export default function Portfolio() {
           <br></br>
               <div className="border-con">
                 <div className="text-con">
+                  
             <h2>Video Editor</h2>
+            
           </div>
           <br></br>
           <br></br>

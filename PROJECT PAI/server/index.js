@@ -116,7 +116,7 @@ app.put("/updatework/:id", (req, res) => {
 
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-    cb(null, '../client/public/uploads')
+    cb(null, '../client/public/upload')
     },
     filename: function (req, file, cb) {
     cb(null, Date.now() + ".png")
@@ -130,3 +130,34 @@ app.put("/updatework/:id", (req, res) => {
     
     res.send(req.file)
     })
+
+
+    // app.post('/iflogin',async (req,res) => {
+
+
+    //     try(
+    //         const (Email,password) = req.body
+
+    //         const sql = `SELECT * FROM customer WHERE email='${Email}' and password='${password}' `;
+    //     )
+
+
+    //     const email = req.body.email;
+    //     const password = req.body.password;
+    //     console.log(email,password)
+      
+    //     pool.query("SELECT * FROM customer WHERE email=? and password=?",
+    //     [email,password],
+    //     (err,result)=>{
+    //         if(err){
+    //             console.log(err); 
+    //             res.send({err:err});
+    //         }
+    //         if(result.length>0){
+    //             res.send(result);
+    //         }else{
+    //             res.send({message:"Wrong email/password.."});
+    //         }
+      
+    //     })
+    //   })

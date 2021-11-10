@@ -24,3 +24,15 @@ h1{
 .bg-about{
     background-color: rgb(51, 54, 47);
 }
+
+.img_1{
+    border: solid;
+    color: black;
+    width: 1025px;
+    margin-left: 23.5%;
+}
+.color-ab{
+    background-color: rgb(255, 203, 203);
+    margin-left: 20%;
+    margin-right: 20%;
+}
