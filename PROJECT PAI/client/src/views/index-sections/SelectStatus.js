@@ -25,12 +25,12 @@ export default function SelectStatus() {
     return (
       <div>
         <Form.Select aria-label="Default select" className="form-control">
-          <option value="name detail">Select Status</option>
+          <option value="name detail"></option>
           {Status.map((a) => {
             return (
               <>
-                <option value={a.Status} placeholder="Name">
-                  {a.Status}
+                <option value={a.status_name} placeholder="Name">
+                  {a.status_name}
                 </option>
   
               </>
