@@ -151,7 +151,7 @@ app.put("/updatework/:id", (req, res) => {
       });
 
       app.get("/status",(req,res) =>{
-        db.query("select * from status " , (err,result)=>{
+        db.query("select status_name from status " , (err,result)=>{
             if(err){
                 console.log(err)
             

@@ -32,22 +32,22 @@ export default function From() {
     console.error(err.message);
   }
   }
-  const loadList = async () => {
-    try {
-      const resp = await fetch(`http://localhost:6060/work`);
-      const jsonData = await resp.json();
+  // const loadList = async () => {
+  //   try {
+  //     const resp = await fetch(`http://localhost:6060/work`);
+  //     const jsonData = await resp.json();
 
-      setList(jsonData);
+  //     setList(jsonData);
 
-      console.log("Resp", resp);
-      console.log("List:", list);
-    } catch (err) {
-      console.error(err.message);
-    }
-  };
+  //     console.log("Resp", resp);
+  //     console.log("List:", list);
+  //   } catch (err) {
+  //     console.error(err.message);
+  //   }
+  // };
   useEffect(() => {
     console.log("Enter useEffect()");
-    loadList();
+    // loadList();
   }, [work_name]);
 
   console.log(work_name)

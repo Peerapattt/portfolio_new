@@ -166,8 +166,8 @@ export default function ShowWork() {
                     }}
                   /> */}
                   <div
-                    className="form-group mt-5"
-                    onChange={(e) => {
+                    className="form-group "
+                    onChange={e => {
                       setStatus(e.target.value);
                     }}
                   >
@@ -178,7 +178,7 @@ export default function ShowWork() {
                 <td>
                   <button
                     type="button"
-                    className="btn btn-success ml-3"
+                    className="btn btn-success "
                     onClick={(e) => {
                       onUpdateWork(e);
                     }}
