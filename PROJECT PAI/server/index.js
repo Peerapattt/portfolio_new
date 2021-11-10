@@ -75,7 +75,7 @@ app.post("/insertwork",(req,res) =>{
     })
 })
 
-app.get("/showwork",(req,res) =>{
+app.get("/showwork/:id",(req,res) =>{
     db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status
     from customer ` , (err,result)=>{
         if(err){
@@ -150,6 +150,17 @@ app.put("/updatework/:id", (req, res) => {
         }
       });
 
+      app.get("/status",(req,res) =>{
+        db.query("select * from status " , (err,result)=>{
+            if(err){
+                console.log(err)
+            
+            }
+            else{
+                res.send(result)
+            }
+        })
+    })
 
 
 

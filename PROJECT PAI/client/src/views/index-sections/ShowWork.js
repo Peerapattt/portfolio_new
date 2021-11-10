@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import EditWork from "./EditWork";
 import Edit from "./Edit";
-import Edittest from "./Edittest";
 import { Form } from "react-bootstrap";
 import "assets/css/ShowWork.css";
+import SelectStatus from "./SelectStatus";
 
 export default function ShowWork() {
   const [fullname, setfullname] = useState();
@@ -13,6 +12,8 @@ export default function ShowWork() {
   const [id, setid] = useState();
   const [list, setList] = useState([]);
   const [ID, setID] = useState([]);
+  const [Status, setStatus] = useState([]);
+
   useEffect(() => {
     console.log("Enter useEffect()");
     loadList();
@@ -20,7 +21,7 @@ export default function ShowWork() {
   const loadList = async () => {
     ///รับค่า         ///ไม่มีmodal
     try {
-      const resp = await fetch(`http://localhost:6060/showwork`);
+      const resp = await fetch(`http://localhost:6060/showwork/:id`);
       const jsonData = await resp.json();
 
       setList(jsonData);
@@ -101,8 +102,11 @@ export default function ShowWork() {
             return (
               <tr>
                 {/* <td>{elt.id}</td> */}
-
-                <td>
+                <td>{elt.id}</td>
+                <td>{elt.fullname}</td>
+                <td>{elt.phone}</td>
+                <td>{elt.email}</td>
+                {/* <td>
                   <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
@@ -111,9 +115,10 @@ export default function ShowWork() {
                       setid(e.target.value);
                     }}
                   />
-                </td>
+                </td> */}
                 {/* <td>{elt.fullname}</td> */}
-                <td>
+
+                {/* <td>
                   <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
@@ -122,9 +127,10 @@ export default function ShowWork() {
                       setfullname(e.target.value);
                     }}
                   />
-                </td>
+                </td> */}
                 {/* <td>{elt.phone}</td> */}
-                <td>
+
+                {/* <td>
                   <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
@@ -133,9 +139,10 @@ export default function ShowWork() {
                       setphone(e.target.value);
                     }}
                   />
-                </td>
+                </td> */}
                 {/* <td>{elt.email}</td> */}
-                <td>
+
+                {/* <td>
                   <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
@@ -144,43 +151,50 @@ export default function ShowWork() {
                       setemail(e.target.value);
                     }}
                   />
-                </td>
+                </td> */}
                 <td>{elt.work_detail}</td>
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>
                 {/* <td>{elt.status}</td> */}
                 <td>
-                  <Form.Control
+                  {/* <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
                     placeholder={elt.status}
                     onChange={(e) => {
                       setstatus(e.target.value);
                     }}
-                  />
+                  /> */}
+                  <div
+                    className="form-group mt-5"
+                    onChange={(e) => {
+                      setStatus(e.target.value);
+                    }}
+                  >
+                    <SelectStatus/>
+                  </div>
                 </td>
-  
-                  <td>
-                    <button
-                      type="button"
-                      className="btn btn-success ml-3"
-                      onClick={(e) => {
-                        onUpdateWork(e);
-                      }}
-                    >
-                      Save
-                    </button>
-                  </td>
-                  
-               
+
                 <td>
-                <button
+                  <button
+                    type="button"
+                    className="btn btn-success ml-3"
+                    onClick={(e) => {
+                      onUpdateWork(e);
+                    }}
+                  >
+                    Save
+                  </button>
+                </td>
+
+                <td>
+                  <button
                     className="btn btn-danger"
                     onClick={() => deleteItem(elt.id)}
                   >
                     Delete
                   </button>
-                  </td>
+                </td>
               </tr>
             );
           })}
