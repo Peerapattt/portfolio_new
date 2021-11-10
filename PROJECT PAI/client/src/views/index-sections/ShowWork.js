@@ -8,11 +8,10 @@ export default function ShowWork() {
   const [fullname, setfullname] = useState();
   const [phone, setphone] = useState();
   const [email, setemail] = useState();
-  const [status, setstatus] = useState();
   const [id, setid] = useState();
   const [list, setList] = useState([]);
   const [ID, setID] = useState([]);
-  const [Status, setStatus] = useState([]);
+  const [status, setStatus] = useState([]);
 
   useEffect(() => {
     console.log("Enter useEffect()");
@@ -101,12 +100,10 @@ export default function ShowWork() {
           {list.map((elt) => {
             return (
               <tr>
+              
                 {/* <td>{elt.id}</td> */}
-                <td>{elt.id}</td>
-                <td>{elt.fullname}</td>
-                <td>{elt.phone}</td>
-                <td>{elt.email}</td>
-                {/* <td>
+               
+                <td>
                   <Form.Control
                     class="form-control mr-sm-2"
                     type="search"
@@ -115,7 +112,7 @@ export default function ShowWork() {
                       setid(e.target.value);
                     }}
                   />
-                </td> */}
+                </td>
                 {/* <td>{elt.fullname}</td> */}
 
                 {/* <td>
@@ -152,6 +149,9 @@ export default function ShowWork() {
                     }}
                   />
                 </td> */}
+                <td>{elt.fullname}</td>
+                <td>{elt.phone}</td>
+                <td>{elt.email}</td>
                 <td>{elt.work_detail}</td>
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>

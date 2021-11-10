@@ -63,7 +63,7 @@ app.get("/workname",(req,res) =>{
 
 app.post("/insertwork",(req,res) =>{
     const {fullname,phone,email,work_detail,work_name} = req.body
-    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status) 
+    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status_name) 
     value ('${fullname}','${phone}','${email}','${work_detail}','${work_name}','wait')` , (err,result)=>{
         if(err){
             console.log(err)
@@ -76,7 +76,7 @@ app.post("/insertwork",(req,res) =>{
 })
 
 app.get("/showwork/:id",(req,res) =>{
-    db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status
+    db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status_name
     from customer ` , (err,result)=>{
         if(err){
             console.log(err)
@@ -93,7 +93,7 @@ app.put("/updatework/:id", (req, res) => {
     try {
       let { id } = req.params;
       let  {fullname,phone,email,status} = req.body;
-      const sql= `UPDATE customer SET fullname = '${fullname}',phone ='${phone}',email ='${email}',status ='${status}' where id = '${id}' `
+      const sql= `UPDATE customer SET status_name ='${status}' where id = '${id}' `
       console.log(fullname,phone,email,status);
       console.log(id);
       console.log(sql);
