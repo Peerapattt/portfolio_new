@@ -63,7 +63,7 @@ app.get("/workname",(req,res) =>{
 
 app.post("/insertwork",(req,res) =>{
     const {fullname,phone,email,work_detail,work_name} = req.body
-    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status) 
+    db.query(`INSERT INTO customer (fullname,phone,email,work_detail,work_name,status_name) 
     value ('${fullname}','${phone}','${email}','${work_detail}','${work_name}','wait')` , (err,result)=>{
         if(err){
             console.log(err)
@@ -74,28 +74,61 @@ app.post("/insertwork",(req,res) =>{
         }
     })
 })
+app.get("/showwork", (req, res) => {
+    try {
+        const work_name = req.params.name;
+        const sql = `select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status_name
+        from customer  ORDER BY id ASC`;
+      console.log (sql)
+      db.query(sql, (err, results) => {
+        if (err) {
+          throw err;
+        }
+        console.log(results);
+        res.send(results);
+      });
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
+app.get("/showwork/:name", (req, res) => {
+    try {
+        const work_name = req.params.name;
+        const sql = `select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status_name
+        from customer where work_name like "%`+`${work_name}%" ORDER BY id ASC`;
+      console.log (sql)
+      db.query(sql, (err, results) => {
+        if (err) {
+          throw err;
+        }
+        console.log(results);
+        res.send(results);
+      });
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
 
-app.get("/showwork/:id",(req,res) =>{
-    db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status
-    from customer ` , (err,result)=>{
-        if(err){
-            console.log(err)
+// app.get("/showwork/:name",(req,res) =>{
+//     const work_name = req.params.name;
+//     db.query(`select DATE_FORMAT(regdate, "%W %e %M %Y") AS regdate,id,fullname,phone,email,work_detail,work_name,status_name
+//     from customer where work_name like "%`+`${work_name}%" ` , (err,result)=>{
+//         if(err){
+//             console.log(err)
         
-        }
-        else{
-            res.send(result)
-        }
-    })
-})
+//         }
+//         else{
+//             res.send(result)
+//         }
+//     })
+// })
 
 
 app.put("/updatework/:id", (req, res) => {
     try {
-      let { id } = req.params;
-      let  {fullname,phone,email,status} = req.body;
-      const sql= `UPDATE customer SET fullname = '${fullname}',phone ='${phone}',email ='${email}',status ='${status}' where id = '${id}' `
-      console.log(fullname,phone,email,status);
-      console.log(id);
+      let {id} = req.params;
+      let  {status} = req.body;
+      const sql= `UPDATE customer SET status_name = "${status}" where id = "${id}" `
       console.log(sql);
       db.query(sql, (err, results) => {
         if (err) {
@@ -151,7 +184,7 @@ app.put("/updatework/:id", (req, res) => {
       });
 
       app.get("/status",(req,res) =>{
-        db.query("select * from status " , (err,result)=>{
+        db.query("select status_name from status " , (err,result)=>{
             if(err){
                 console.log(err)
             

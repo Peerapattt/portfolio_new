@@ -8,11 +8,11 @@ export default function ShowWork() {
   const [fullname, setfullname] = useState();
   const [phone, setphone] = useState();
   const [email, setemail] = useState();
-  const [status, setstatus] = useState();
   const [id, setid] = useState();
   const [list, setList] = useState([]);
   const [ID, setID] = useState([]);
-  const [Status, setStatus] = useState([]);
+  const [status, setStatus] = useState([]);
+  const [workname,setWorkname] = useState([""]);
 
   useEffect(() => {
     console.log("Enter useEffect()");
@@ -21,7 +21,7 @@ export default function ShowWork() {
   const loadList = async () => {
     ///รับค่า         ///ไม่มีmodal
     try {
-      const resp = await fetch(`http://localhost:6060/showwork/:id`);
+      const resp = await fetch(`http://localhost:6060/showwork/${workname}`);
       const jsonData = await resp.json();
 
       setList(jsonData);
@@ -36,7 +36,7 @@ export default function ShowWork() {
     /// this is update
     e.preventDefault();
     try {
-      const bodyIn = { id, fullname, phone, email, status };
+      const bodyIn = { id,status };
       const res = fetch(`http://localhost:6060/updatework/${id}`, {
         method: "put",
         headers: { "Content-Type": "application/json" },
@@ -66,7 +66,7 @@ export default function ShowWork() {
   useEffect(() => {
     console.log("Enter useEffect()");
     loadList();
-  }, [ID]);
+  }, [workname]);
 
   return (
     <div>
@@ -78,10 +78,17 @@ export default function ShowWork() {
         <div className="color-sw">
           <h1>Resume</h1>
         </div>
-        <hr />
+        <Form.Control
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              onChange={(e) => {
+                setWorkname(e.target.value);
+              }}
+            />
       </div>
 
-      <table className="table table-striped table-dark mt-5">
+      <table className="table table-striped table-dark mt-3">
         {/* <form> */}
         <thead>
           <tr>
@@ -94,6 +101,7 @@ export default function ShowWork() {
             <th>Date</th>
             <th>Status</th>
             <th>Edit</th>
+            <th>Save</th>
             <th>Delete</th>
           </tr>
         </thead>
@@ -101,21 +109,19 @@ export default function ShowWork() {
           {list.map((elt) => {
             return (
               <tr>
+              
                 {/* <td>{elt.id}</td> */}
-                <td>{elt.id}</td>
-                <td>{elt.fullname}</td>
-                <td>{elt.phone}</td>
-                <td>{elt.email}</td>
-                {/* <td>
+               
+                <td>
                   <Form.Control
-                    class="form-control mr-sm-2"
+                    class="form-control mr-sm-2" 
                     type="search"
                     placeholder={elt.id}
                     onChange={(e) => {
                       setid(e.target.value);
                     }}
                   />
-                </td> */}
+                </td>
                 {/* <td>{elt.fullname}</td> */}
 
                 {/* <td>
@@ -152,10 +158,13 @@ export default function ShowWork() {
                     }}
                   />
                 </td> */}
+                <td>{elt.fullname}</td>
+                <td>{elt.phone}</td>
+                <td>{elt.email}</td>
                 <td>{elt.work_detail}</td>
                 <td>{elt.work_name}</td>
                 <td>{elt.regdate}</td>
-                {/* <td>{elt.status}</td> */}
+                <td>{elt.status_name}</td>
                 <td>
                   {/* <Form.Control
                     class="form-control mr-sm-2"
@@ -166,8 +175,8 @@ export default function ShowWork() {
                     }}
                   /> */}
                   <div
-                    className="form-group"
-                    onChange={(e) => {
+                    className="form-group "
+                    onChange={e => {
                       setStatus(e.target.value);
                     }}
                   >
@@ -178,7 +187,7 @@ export default function ShowWork() {
                 <td>
                   <button
                     type="button"
-                    className="btn btn-success"
+                    className="btn btn-success "
                     onClick={(e) => {
                       onUpdateWork(e);
                     }}
