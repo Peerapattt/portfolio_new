@@ -78,10 +78,11 @@ export default function ShowWork() {
         <div className="color-sw">
           <h1>Resume</h1>
         </div>
+        <br></br>
         <Form.Control
               class="form-control mr-sm-2"
               type="search"
-              placeholder="Search"
+              placeholder="Enter Work Name"
               onChange={(e) => {
                 setWorkname(e.target.value);
               }}
